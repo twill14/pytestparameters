@@ -3,7 +3,7 @@ import json
 from pytest import fixture
 from selenium import webdriver
 
-data_path = 'test_data.json'
+data_path = '../data/test_data.json'
 
 
 def load_test_data(path):
@@ -21,6 +21,6 @@ def browser(request):
 
 
 @fixture(params=load_test_data(data_path))
-def test_data(request):
+def tv_brand(request):
     data = request.param
     return data
